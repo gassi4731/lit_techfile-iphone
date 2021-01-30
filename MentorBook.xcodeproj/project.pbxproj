@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75AC6E0E25C5B1E4003F6329 /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AC6E0D25C5B1E4003F6329 /* Mentor.swift */; };
 		75E94EEF25C5A4B90048B175 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E94EEE25C5A4B90048B175 /* AppDelegate.swift */; };
 		75E94EF125C5A4B90048B175 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E94EF025C5A4B90048B175 /* SceneDelegate.swift */; };
 		75E94EF325C5A4B90048B175 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E94EF225C5A4B90048B175 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		75AC6E0D25C5B1E4003F6329 /* Mentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
 		75E94EEB25C5A4B90048B175 /* MentorBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentorBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E94EEE25C5A4B90048B175 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75E94EF025C5A4B90048B175 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				75E94EF725C5A4BA0048B175 /* Assets.xcassets */,
 				75E94EF925C5A4BA0048B175 /* LaunchScreen.storyboard */,
 				75E94EFC25C5A4BA0048B175 /* Info.plist */,
+				75AC6E0D25C5B1E4003F6329 /* Mentor.swift */,
 			);
 			path = MentorBook;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75AC6E0E25C5B1E4003F6329 /* Mentor.swift in Sources */,
 				75E94EF325C5A4B90048B175 /* ViewController.swift in Sources */,
 				75E94EEF25C5A4B90048B175 /* AppDelegate.swift in Sources */,
 				75E94EF125C5A4B90048B175 /* SceneDelegate.swift in Sources */,
