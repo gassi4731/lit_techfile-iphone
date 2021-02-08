@@ -13,6 +13,7 @@
 		755B4C3D25D0BD7900BC5235 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 755B4C3B25D0BD7900BC5235 /* Main.storyboard */; };
 		755B4C3F25D0BD7A00BC5235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 755B4C3E25D0BD7A00BC5235 /* Assets.xcassets */; };
 		755B4C4225D0BD7A00BC5235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 755B4C4025D0BD7A00BC5235 /* LaunchScreen.storyboard */; };
+		755B4C4B25D0BDF300BC5235 /* haikei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 755B4C4A25D0BDF300BC5235 /* haikei.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		755B4C3E25D0BD7A00BC5235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		755B4C4125D0BD7A00BC5235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		755B4C4325D0BD7A00BC5235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		755B4C4A25D0BDF300BC5235 /* haikei.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = haikei.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		755B4C3425D0BD7900BC5235 /* Count */ = {
 			isa = PBXGroup;
 			children = (
+				755B4C4A25D0BDF300BC5235 /* haikei.jpg */,
 				755B4C3525D0BD7900BC5235 /* AppDelegate.swift */,
 				755B4C3725D0BD7900BC5235 /* SceneDelegate.swift */,
 				755B4C3925D0BD7900BC5235 /* ViewController.swift */,
@@ -124,6 +127,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				755B4C4B25D0BDF300BC5235 /* haikei.jpg in Resources */,
 				755B4C4225D0BD7A00BC5235 /* LaunchScreen.storyboard in Resources */,
 				755B4C3F25D0BD7A00BC5235 /* Assets.xcassets in Resources */,
 				755B4C3D25D0BD7900BC5235 /* Main.storyboard in Resources */,
