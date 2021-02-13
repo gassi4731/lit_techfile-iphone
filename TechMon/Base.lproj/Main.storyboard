@@ -116,6 +116,9 @@
                                 <state key="normal" title="ファイア" backgroundImage="gold_button.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="fireAction" destination="TFU-Bh-2fW" eventType="touchUpInside" id="4y4-0s-68k"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffm-2o-crl">
                                 <rect key="frame" x="284" y="714" width="101" height="81"/>
@@ -124,6 +127,9 @@
                                 <state key="normal" title="ためる" backgroundImage="gold_button.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tameruAction" destination="TFU-Bh-2fW" eventType="touchUpInside" id="vzo-Oo-fGd"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="battlebg.png" translatesAutoresizingMaskIntoConstraints="NO" id="pmM-4f-IGc">
                                 <rect key="frame" x="0.0" y="98" width="414" height="550"/>
@@ -265,6 +271,7 @@
                         <outlet property="playerImageView" destination="C6P-ZU-wr1" id="fMb-Rd-sQV"/>
                         <outlet property="playerMPLabel" destination="1Q6-yF-8XB" id="5GM-vI-wot"/>
                         <outlet property="playerNameLabel" destination="LJR-Ym-LmQ" id="Zp7-ZU-0rP"/>
+                        <outlet property="playerTPLabel" destination="3p2-hl-4cc" id="o97-1j-kn0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Cm-cv-I95" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
