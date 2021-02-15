@@ -32,6 +32,15 @@
 		7549B1A325D115D1000022CC /* misaki_gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7549B19225D115D1000022CC /* misaki_gothic.ttf */; };
 		7549B1A625D11A9F000022CC /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7549B1A525D11A9F000022CC /* LobbyViewController.swift */; };
 		7549B1A925D11AAB000022CC /* BattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7549B1A825D11AAB000022CC /* BattleViewController.swift */; };
+		756E7A8B25DA019F00701680 /* monster005.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E7A8225DA019F00701680 /* monster005.png */; };
+		756E7A8C25DA019F00701680 /* monster004.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E7A8325DA019F00701680 /* monster004.png */; };
+		756E7A8D25DA019F00701680 /* monster006.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E7A8425DA019F00701680 /* monster006.png */; };
+		756E7A8E25DA019F00701680 /* monster007.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E7A8525DA019F00701680 /* monster007.png */; };
+		756E7A8F25DA019F00701680 /* monster003.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E7A8625DA019F00701680 /* monster003.png */; };
+		756E7A9025DA019F00701680 /* monster002.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E7A8725DA019F00701680 /* monster002.png */; };
+		756E7A9125DA019F00701680 /* monster001.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E7A8825DA019F00701680 /* monster001.png */; };
+		756E7A9225DA019F00701680 /* monster009.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E7A8925DA019F00701680 /* monster009.png */; };
+		756E7A9325DA019F00701680 /* monster008.png in Resources */ = {isa = PBXBuildFile; fileRef = 756E7A8A25DA019F00701680 /* monster008.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +71,15 @@
 		7549B19225D115D1000022CC /* misaki_gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = misaki_gothic.ttf; sourceTree = "<group>"; };
 		7549B1A525D11A9F000022CC /* LobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
 		7549B1A825D11AAB000022CC /* BattleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
+		756E7A8225DA019F00701680 /* monster005.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monster005.png; sourceTree = "<group>"; };
+		756E7A8325DA019F00701680 /* monster004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monster004.png; sourceTree = "<group>"; };
+		756E7A8425DA019F00701680 /* monster006.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monster006.png; sourceTree = "<group>"; };
+		756E7A8525DA019F00701680 /* monster007.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monster007.png; sourceTree = "<group>"; };
+		756E7A8625DA019F00701680 /* monster003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monster003.png; sourceTree = "<group>"; };
+		756E7A8725DA019F00701680 /* monster002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monster002.png; sourceTree = "<group>"; };
+		756E7A8825DA019F00701680 /* monster001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monster001.png; sourceTree = "<group>"; };
+		756E7A8925DA019F00701680 /* monster009.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monster009.png; sourceTree = "<group>"; };
+		756E7A8A25DA019F00701680 /* monster008.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monster008.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +140,7 @@
 		7549B17E25D115D1000022CC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				756E7A8125DA019F00701680 /* monster */,
 				7549B17F25D115D1000022CC /* lobby.png */,
 				7549B18025D115D1000022CC /* battlebg.png */,
 				7549B18125D115D1000022CC /* bgimage.jpg */,
@@ -162,6 +181,22 @@
 				7549B19225D115D1000022CC /* misaki_gothic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		756E7A8125DA019F00701680 /* monster */ = {
+			isa = PBXGroup;
+			children = (
+				756E7A8225DA019F00701680 /* monster005.png */,
+				756E7A8325DA019F00701680 /* monster004.png */,
+				756E7A8425DA019F00701680 /* monster006.png */,
+				756E7A8525DA019F00701680 /* monster007.png */,
+				756E7A8625DA019F00701680 /* monster003.png */,
+				756E7A8725DA019F00701680 /* monster002.png */,
+				756E7A8825DA019F00701680 /* monster001.png */,
+				756E7A8925DA019F00701680 /* monster009.png */,
+				756E7A8A25DA019F00701680 /* monster008.png */,
+			);
+			path = monster;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,18 +257,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				7549B19825D115D1000022CC /* yusya.png in Resources */,
+				756E7A8B25DA019F00701680 /* monster005.png in Resources */,
+				756E7A9225DA019F00701680 /* monster009.png in Resources */,
+				756E7A9325DA019F00701680 /* monster008.png in Resources */,
 				7549B19525D115D1000022CC /* bgimage.jpg in Resources */,
+				756E7A9025DA019F00701680 /* monster002.png in Resources */,
 				7549B19625D115D1000022CC /* waku.png in Resources */,
+				756E7A8F25DA019F00701680 /* monster003.png in Resources */,
 				7549B19C25D115D1000022CC /* SE_fanfare.mp3 in Resources */,
+				756E7A8D25DA019F00701680 /* monster006.png in Resources */,
 				7549B19325D115D1000022CC /* lobby.png in Resources */,
 				7549B19725D115D1000022CC /* gold_button.png in Resources */,
 				7549B19F25D115D1000022CC /* SE_attack.mp3 in Resources */,
 				7549B17525D1158A000022CC /* LaunchScreen.storyboard in Resources */,
+				756E7A8C25DA019F00701680 /* monster004.png in Resources */,
 				7549B1A225D115D1000022CC /* lobby.mp3 in Resources */,
 				7549B17225D1158A000022CC /* Assets.xcassets in Resources */,
 				7549B1A325D115D1000022CC /* misaki_gothic.ttf in Resources */,
+				756E7A8E25DA019F00701680 /* monster007.png in Resources */,
 				7549B1A025D115D1000022CC /* SE_gameover.mp3 in Resources */,
 				7549B19425D115D1000022CC /* battlebg.png in Resources */,
+				756E7A9125DA019F00701680 /* monster001.png in Resources */,
 				7549B19D25D115D1000022CC /* BGM_battle001.mp3 in Resources */,
 				7549B1A125D115D1000022CC /* SE_charge.mp3 in Resources */,
 				7549B19E25D115D1000022CC /* SE_fire.mp3 in Resources */,

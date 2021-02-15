@@ -19,10 +19,12 @@ class TechMonManager {
     var enemy: Character!
     
     init() {
+        // ドラゴンの画像をランダム設定
+        let enemyImageNum:Int = Int.random(in: 0...9)
         
         // キャラクターの設定
         player = Character(name: "勇者", imageName: "yusya.png", attackPoint: 30, maxHP: 100, maxTP: 100, maxMP: 20)
-        enemy = Character(name: "ドラゴン", imageName: "monster.png", attackPoint: 20, maxHP: 400, maxTP: 0, maxMP: 35)
+        enemy = Character(name: "ドラゴン", imageName: "monster00" + String(enemyImageNum) + ".png", attackPoint: 20, maxHP: 400, maxTP: 0, maxMP: 35)
     }
     
     // キャラクターたちのステータスをリセットする
