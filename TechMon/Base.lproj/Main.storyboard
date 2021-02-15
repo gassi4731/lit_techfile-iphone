@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,40 +22,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bgimage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="CsD-P3-VvA">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgimage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="CsD-P3-VvA">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lobby.png" translatesAutoresizingMaskIntoConstraints="NO" id="vBM-iU-PAO">
-                                <rect key="frame" x="0.0" y="94" width="414" height="400"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="330"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="330" id="kQy-gh-D3h"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozk-QU-2ti">
-                                <rect key="frame" x="20" y="145" width="34" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="スタミナ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8e-7T-SLw">
-                                <rect key="frame" x="20" y="423" width="68" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100 / 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpk-FG-hZe">
-                                <rect key="frame" x="107" y="423" width="77" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lv. 15" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXR-po-kgx">
-                                <rect key="frame" x="343" y="145" width="51" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="159" translatesAutoresizingMaskIntoConstraints="NO" id="NLz-wy-oGU">
+                                <rect key="frame" x="20" y="114" width="374" height="290"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="261" translatesAutoresizingMaskIntoConstraints="NO" id="MJP-Et-ktp">
+                                        <rect key="frame" x="0.0" y="0.0" width="164" height="290"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozk-QU-2ti">
+                                                <rect key="frame" x="0.0" y="0.0" width="34" height="12"/>
+                                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="IM4-Wu-bZs">
+                                                <rect key="frame" x="0.0" y="273" width="163.5" height="17"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="スタミナ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8e-7T-SLw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="68" height="17"/>
+                                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 / 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpk-FG-hZe">
+                                                        <rect key="frame" x="87" y="0.0" width="76.5" height="17"/>
+                                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lv. 15" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXR-po-kgx">
+                                        <rect key="frame" x="323" y="0.0" width="51" height="17"/>
+                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="K3t-9R-avO"/>
+                                </constraints>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOe-IB-Nog">
                                 <rect key="frame" x="61.5" y="623" width="291" height="89"/>
                                 <constraints>
@@ -69,23 +87,33 @@
                                     <action selector="toBattle" destination="BYZ-38-t0r" eventType="touchUpInside" id="g3C-xq-4fW"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yusya.png" translatesAutoresizingMaskIntoConstraints="NO" id="Htt-YZ-rZM">
-                                <rect key="frame" x="115" y="134" width="185" height="320"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yusya.png" translatesAutoresizingMaskIntoConstraints="NO" id="Htt-YZ-rZM">
+                                <rect key="frame" x="0.0" y="159" width="414" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="wq2-Av-7gy"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="CsD-P3-VvA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2MP-Gp-PZO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CsD-P3-VvA" secondAttribute="bottom" id="BVW-Kf-WzI"/>
+                            <constraint firstItem="NLz-wy-oGU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0Lb-Bn-7Zw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Htt-YZ-rZM" secondAttribute="trailing" id="337-Hb-u1X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NLz-wy-oGU" secondAttribute="trailing" constant="20" id="Dlg-5D-6yc"/>
+                            <constraint firstItem="Htt-YZ-rZM" firstAttribute="centerX" secondItem="vBM-iU-PAO" secondAttribute="centerX" id="HEL-Rl-aFQ"/>
+                            <constraint firstItem="NLz-wy-oGU" firstAttribute="centerY" secondItem="vBM-iU-PAO" secondAttribute="centerY" id="J7S-72-mnK"/>
                             <constraint firstItem="GOe-IB-Nog" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JTl-N8-HO3"/>
-                            <constraint firstItem="CsD-P3-VvA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Mov-UN-imR"/>
+                            <constraint firstItem="vBM-iU-PAO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="MYe-nO-7lF"/>
+                            <constraint firstItem="vBM-iU-PAO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OcC-yf-32I"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GOe-IB-Nog" secondAttribute="bottom" constant="150" id="PIE-9C-CKO"/>
-                            <constraint firstItem="vBM-iU-PAO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WqR-dH-jbo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CsD-P3-VvA" secondAttribute="trailing" id="gDy-q5-zcT"/>
-                            <constraint firstItem="vBM-iU-PAO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="vPn-HN-eUI"/>
-                            <constraint firstItem="vBM-iU-PAO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xGA-fr-3jh"/>
+                            <constraint firstItem="CsD-P3-VvA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ram-gI-KIW"/>
+                            <constraint firstItem="NLz-wy-oGU" firstAttribute="centerX" secondItem="vBM-iU-PAO" secondAttribute="centerX" id="TmL-Lz-1DZ"/>
+                            <constraint firstItem="vBM-iU-PAO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Wnb-zd-uxL"/>
+                            <constraint firstItem="CsD-P3-VvA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cfX-C3-dlN"/>
+                            <constraint firstAttribute="bottom" secondItem="CsD-P3-VvA" secondAttribute="bottom" id="ntP-ix-Wuj"/>
+                            <constraint firstItem="Htt-YZ-rZM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rgV-fU-y9b"/>
+                            <constraint firstItem="Htt-YZ-rZM" firstAttribute="centerY" secondItem="vBM-iU-PAO" secondAttribute="centerY" id="vT3-dv-euW"/>
+                            <constraint firstItem="CsD-P3-VvA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zAg-Ih-41D"/>
                         </constraints>
                     </view>
                     <connections>
@@ -109,157 +137,229 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgimage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="CvK-aK-gIx">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2x-8H-QcL">
-                                <rect key="frame" x="157" y="714" width="101" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
-                                <state key="normal" title="ファイア" backgroundImage="gold_button.png">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="fireAction" destination="TFU-Bh-2fW" eventType="touchUpInside" id="4y4-0s-68k"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffm-2o-crl">
-                                <rect key="frame" x="284" y="714" width="101" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
-                                <state key="normal" title="ためる" backgroundImage="gold_button.png">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="tameruAction" destination="TFU-Bh-2fW" eventType="touchUpInside" id="vzo-Oo-fGd"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="battlebg.png" translatesAutoresizingMaskIntoConstraints="NO" id="pmM-4f-IGc">
-                                <rect key="frame" x="0.0" y="98" width="414" height="550"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="battlebg.png" translatesAutoresizingMaskIntoConstraints="NO" id="pmM-4f-IGc">
+                                <rect key="frame" x="0.0" y="70" width="414" height="586"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZtB-2v-BWh">
-                                <rect key="frame" x="20" y="127" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C6P-ZU-wr1">
-                                <rect key="frame" x="274" y="499" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gG6-PK-2Md">
-                                <rect key="frame" x="170" y="127" width="224" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6Ab-Dz-rnp">
+                                <rect key="frame" x="20" y="120" width="374" height="486"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edr-S6-qcP">
-                                        <rect key="frame" x="11" y="12" width="147" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJF-G0-C9t">
-                                        <rect key="frame" x="11" y="60" width="17" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="400 / 400" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHS-oV-xKE">
-                                        <rect key="frame" x="85" y="60" width="125" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xJ-gv-cjv">
-                                        <rect key="frame" x="11" y="91" width="17" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 / 35" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgY-nt-iYy">
-                                        <rect key="frame" x="85" y="91" width="125" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ja1-jW-z0Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="120"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZtB-2v-BWh">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gG6-PK-2Md">
+                                                <rect key="frame" x="150" y="0.0" width="224" height="120"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edr-S6-qcP">
+                                                        <rect key="frame" x="10" y="10" width="34" height="17"/>
+                                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="k8u-bf-9di">
+                                                        <rect key="frame" x="10" y="62" width="204" height="48"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="hmN-3i-ewB">
+                                                                <rect key="frame" x="0.0" y="0.0" width="70.5" height="48"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJF-G0-C9t">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="70.5" height="17"/>
+                                                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xJ-gv-cjv">
+                                                                        <rect key="frame" x="0.0" y="31" width="70.5" height="17"/>
+                                                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="EWS-YY-kBg">
+                                                                <rect key="frame" x="127.5" y="0.0" width="76.5" height="48"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400 / 400" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHS-oV-xKE">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="17"/>
+                                                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 / 35" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgY-nt-iYy">
+                                                                        <rect key="frame" x="0.0" y="31" width="76.5" height="17"/>
+                                                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="k8u-bf-9di" secondAttribute="bottom" constant="10" id="CtG-NE-kIY"/>
+                                                    <constraint firstItem="k8u-bf-9di" firstAttribute="leading" secondItem="gG6-PK-2Md" secondAttribute="leading" constant="10" id="eoT-ZU-o43"/>
+                                                    <constraint firstItem="edr-S6-qcP" firstAttribute="leading" secondItem="gG6-PK-2Md" secondAttribute="leading" constant="10" id="eua-q7-oJg"/>
+                                                    <constraint firstAttribute="trailing" secondItem="k8u-bf-9di" secondAttribute="trailing" constant="10" id="oks-VB-jRi"/>
+                                                    <constraint firstItem="edr-S6-qcP" firstAttribute="top" secondItem="gG6-PK-2Md" secondAttribute="top" constant="10" id="tm1-yR-Pa6"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="4lp-jv-qLm"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ifv-b4-liN">
+                                        <rect key="frame" x="0.0" y="366" width="374" height="120"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UXs-rs-Q5r">
+                                                <rect key="frame" x="0.0" y="0.0" width="224" height="120"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJR-Ym-LmQ">
+                                                        <rect key="frame" x="10" y="10" width="34" height="17"/>
+                                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="GJt-UD-9gf">
+                                                        <rect key="frame" x="10" y="45" width="204" height="65"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="bke-Es-MaA">
+                                                                <rect key="frame" x="0.0" y="0.0" width="68.5" height="65"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jt0-fg-khq">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="68.5" height="17"/>
+                                                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aje-pc-dti">
+                                                                        <rect key="frame" x="0.0" y="24" width="68.5" height="17"/>
+                                                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ube-lh-QCC">
+                                                                        <rect key="frame" x="0.0" y="48" width="68.5" height="17"/>
+                                                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="rNY-su-qCj">
+                                                                <rect key="frame" x="127.5" y="0.0" width="76.5" height="65"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400 / 400" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5R-EP-uoJ">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="17"/>
+                                                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 / 20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Q6-yF-8XB">
+                                                                        <rect key="frame" x="0.0" y="24" width="76.5" height="17"/>
+                                                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 / 100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3p2-hl-4cc">
+                                                                        <rect key="frame" x="0.0" y="48" width="76.5" height="17"/>
+                                                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="LJR-Ym-LmQ" firstAttribute="top" secondItem="UXs-rs-Q5r" secondAttribute="top" constant="10" id="1Yg-Ws-F6r"/>
+                                                    <constraint firstItem="LJR-Ym-LmQ" firstAttribute="leading" secondItem="UXs-rs-Q5r" secondAttribute="leading" constant="10" id="Qbj-vs-BfM"/>
+                                                    <constraint firstItem="GJt-UD-9gf" firstAttribute="leading" secondItem="UXs-rs-Q5r" secondAttribute="leading" constant="10" id="ecT-BH-eTK"/>
+                                                    <constraint firstAttribute="trailing" secondItem="GJt-UD-9gf" secondAttribute="trailing" constant="10" id="nTD-vj-Obw"/>
+                                                    <constraint firstAttribute="bottom" secondItem="GJt-UD-9gf" secondAttribute="bottom" constant="10" id="uW4-ad-TRX"/>
+                                                </constraints>
+                                            </view>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C6P-ZU-wr1">
+                                                <rect key="frame" x="254" y="0.0" width="120" height="120"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="g47-fn-ggA"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UXs-rs-Q5r">
-                                <rect key="frame" x="20" y="499" width="224" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="W9J-qI-49O">
+                                <rect key="frame" x="20" y="706" width="374" height="86"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJR-Ym-LmQ">
-                                        <rect key="frame" x="11" y="12" width="34" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXx-86-NcF">
+                                        <rect key="frame" x="0.0" y="0.0" width="107.5" height="86"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="FXx-86-NcF" secondAttribute="height" multiplier="101:81" id="69f-Oo-NmF"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jt0-fg-khq">
-                                        <rect key="frame" x="11" y="43" width="17" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="こうげき" backgroundImage="gold_button.png">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="attackAction" destination="TFU-Bh-2fW" eventType="touchUpInside" id="gWA-i8-5ky"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2x-8H-QcL">
+                                        <rect key="frame" x="133.5" y="0.0" width="107" height="86"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="G2x-8H-QcL" secondAttribute="height" multiplier="101:81" id="XPJ-fg-t6U"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="400 / 400" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5R-EP-uoJ">
-                                        <rect key="frame" x="87" y="43" width="123" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="ファイア" backgroundImage="gold_button.png">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fireAction" destination="TFU-Bh-2fW" eventType="touchUpInside" id="4y4-0s-68k"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffm-2o-crl">
+                                        <rect key="frame" x="266.5" y="0.0" width="107.5" height="86"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Ffm-2o-crl" secondAttribute="height" multiplier="101:81" id="OPc-0c-KtM"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ube-lh-QCC">
-                                        <rect key="frame" x="11" y="91" width="17" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 / 100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3p2-hl-4cc">
-                                        <rect key="frame" x="87" y="91" width="123" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aje-pc-dti">
-                                        <rect key="frame" x="11" y="66" width="17" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 / 20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Q6-yF-8XB">
-                                        <rect key="frame" x="87" y="66" width="123" height="17"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <state key="normal" title="ためる" backgroundImage="gold_button.png">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tameruAction" destination="TFU-Bh-2fW" eventType="touchUpInside" id="vzo-Oo-fGd"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXx-86-NcF">
-                                <rect key="frame" x="30" y="714" width="101" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
-                                <state key="normal" title="こうげき" backgroundImage="gold_button.png">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="attackAction" destination="TFU-Bh-2fW" eventType="touchUpInside" id="gWA-i8-5ky"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eoA-UJ-ynR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="CvK-aK-gIx" firstAttribute="top" secondItem="eoA-UJ-ynR" secondAttribute="top" id="55s-fn-Jai"/>
+                            <constraint firstAttribute="bottom" secondItem="W9J-qI-49O" secondAttribute="bottom" constant="50" id="5SB-2c-sTU"/>
+                            <constraint firstItem="W9J-qI-49O" firstAttribute="top" secondItem="pmM-4f-IGc" secondAttribute="bottom" constant="50" id="9ug-0W-uRU"/>
                             <constraint firstAttribute="trailing" secondItem="CvK-aK-gIx" secondAttribute="trailing" id="C66-Hm-0Ro"/>
+                            <constraint firstItem="W9J-qI-49O" firstAttribute="leading" secondItem="eoA-UJ-ynR" secondAttribute="leading" constant="20" id="DTX-G2-UVi"/>
                             <constraint firstAttribute="bottom" secondItem="CvK-aK-gIx" secondAttribute="bottom" id="DdN-ay-skh"/>
+                            <constraint firstItem="6Ab-Dz-rnp" firstAttribute="centerX" secondItem="pmM-4f-IGc" secondAttribute="centerX" id="R5N-68-N3D"/>
+                            <constraint firstItem="6Ab-Dz-rnp" firstAttribute="top" secondItem="eoA-UJ-ynR" secondAttribute="top" constant="120" id="WCd-ym-1c4"/>
+                            <constraint firstItem="6Ab-Dz-rnp" firstAttribute="leading" secondItem="eoA-UJ-ynR" secondAttribute="leading" constant="20" id="bM4-W5-Adm"/>
+                            <constraint firstAttribute="trailing" secondItem="W9J-qI-49O" secondAttribute="trailing" constant="20" id="eIx-z6-AI6"/>
+                            <constraint firstItem="6Ab-Dz-rnp" firstAttribute="centerY" secondItem="pmM-4f-IGc" secondAttribute="centerY" id="l1W-8y-Ern"/>
                             <constraint firstItem="CvK-aK-gIx" firstAttribute="leading" secondItem="eoA-UJ-ynR" secondAttribute="leading" id="otD-fR-Phm"/>
+                            <constraint firstItem="pmM-4f-IGc" firstAttribute="top" secondItem="eoA-UJ-ynR" secondAttribute="top" constant="70" id="r0H-sR-qmg"/>
+                            <constraint firstItem="pmM-4f-IGc" firstAttribute="trailing" secondItem="eoA-UJ-ynR" secondAttribute="trailing" id="wCc-xe-8i3"/>
+                            <constraint firstItem="eoA-UJ-ynR" firstAttribute="trailing" secondItem="6Ab-Dz-rnp" secondAttribute="trailing" constant="20" id="wJz-Jb-JWE"/>
+                            <constraint firstItem="W9J-qI-49O" firstAttribute="top" secondItem="6Ab-Dz-rnp" secondAttribute="bottom" constant="100" id="yQt-Sv-EhA"/>
+                            <constraint firstItem="pmM-4f-IGc" firstAttribute="leading" secondItem="eoA-UJ-ynR" secondAttribute="leading" id="yxf-6W-61k"/>
                         </constraints>
                     </view>
                     <connections>
