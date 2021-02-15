@@ -263,15 +263,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="attackButton" destination="FXx-86-NcF" id="nF5-BA-vFP"/>
                         <outlet property="enemyHPLabel" destination="NHS-oV-xKE" id="7vV-Ad-eac"/>
                         <outlet property="enemyImageView" destination="ZtB-2v-BWh" id="shs-ar-tqv"/>
                         <outlet property="enemyMPLabel" destination="qgY-nt-iYy" id="R6H-bx-pNX"/>
                         <outlet property="enemyNameLabel" destination="edr-S6-qcP" id="yPK-Zc-dfE"/>
+                        <outlet property="fireButton" destination="G2x-8H-QcL" id="YXt-vA-1Yp"/>
                         <outlet property="playerHPLabel" destination="Q5R-EP-uoJ" id="kAJ-MO-y8R"/>
                         <outlet property="playerImageView" destination="C6P-ZU-wr1" id="fMb-Rd-sQV"/>
                         <outlet property="playerMPLabel" destination="1Q6-yF-8XB" id="5GM-vI-wot"/>
                         <outlet property="playerNameLabel" destination="LJR-Ym-LmQ" id="Zp7-ZU-0rP"/>
                         <outlet property="playerTPLabel" destination="3p2-hl-4cc" id="o97-1j-kn0"/>
+                        <outlet property="tameruButton" destination="Ffm-2o-crl" id="yVE-c6-xio"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Cm-cv-I95" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

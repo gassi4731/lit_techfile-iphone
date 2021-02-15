@@ -20,6 +20,10 @@ class BattleViewController: UIViewController {
     @IBOutlet var enemyHPLabel: UILabel!
     @IBOutlet var enemyMPLabel: UILabel!
     
+    @IBOutlet var attackButton: UIButton!
+    @IBOutlet var fireButton: UIButton!
+    @IBOutlet var tameruButton: UIButton!
+    
     let techMonManager = TechMonManager.shared
     
     var player: Character!
@@ -37,12 +41,12 @@ class BattleViewController: UIViewController {
         // UIの設定
         updateUI()
         // プレイヤーのステータスを反映
-        playerNameLabel.text = "勇者"
-        playerImageView.image = UIImage(named: "yusya.png")
+        playerNameLabel.text = player.name
+        playerImageView.image = player.image
         
         // 敵のステータスを反映
-        enemyNameLabel.text = "龍"
-        enemyImageView.image = UIImage(named: "monster.png")
+        enemyNameLabel.text = enemy.name
+        enemyImageView.image = enemy.image
         
         // ゲームスタート
         gameTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self,
@@ -77,9 +81,17 @@ class BattleViewController: UIViewController {
         player.currentMP += 1
         if player.currentMP >= 20 {
             isPlayerAttackAvailable = true
+            attackButton.isEnabled = true
+            tameruButton.isEnabled = true
+            if player.currentTP >= 40 {
+                fireButton.isEnabled = true
+            }
             player.currentMP = 20
         } else {
             isPlayerAttackAvailable = false
+            attackButton.isEnabled = false
+            fireButton.isEnabled = false
+            tameruButton.isEnabled = false
         }
         
         // 敵のステータスを更新
@@ -103,7 +115,7 @@ class BattleViewController: UIViewController {
         judgeBattle()
     }
     
-    // プレイヤーの攻撃
+    // プレイヤーの攻撃（アタック）
     @IBAction func attackAction() {
         if isPlayerAttackAvailable {
             techMonManager.damageAnimation(imageView: enemyImageView)
@@ -122,6 +134,7 @@ class BattleViewController: UIViewController {
         }
     }
     
+    // プレイヤーの攻撃（ファイア）
     @IBAction func fireAction() {
         if isPlayerAttackAvailable && player.currentTP >= 40 {
             techMonManager.damageAnimation(imageView: enemyImageView)
@@ -136,6 +149,18 @@ class BattleViewController: UIViewController {
             player.currentMP = 0
             
             judgeBattle()
+        }
+    }
+    
+    // プレイヤーの攻撃（ためる）
+    @IBAction func tameruAction() {
+        if isPlayerAttackAvailable {
+            techMonManager.playSE(fileName: "SE_charge")
+            player.currentTP += 40
+            if player.currentTP >= player.maxTP {
+                player.currentTP = player.maxTP
+            }
+            player.currentMP = 0
         }
     }
     
@@ -163,16 +188,5 @@ class BattleViewController: UIViewController {
         }))
         
         present(alert, animated: true, completion: nil)
-    }
-    
-    @IBAction func tameruAction() {
-        if isPlayerAttackAvailable {
-            techMonManager.playSE(fileName: "SE_charge")
-            player.currentTP += 40
-            if player.currentTP >= player.maxTP {
-                player.currentTP = player.maxTP
-            }
-            player.currentMP = 0
-        }
     }
 }
